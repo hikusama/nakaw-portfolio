@@ -3,454 +3,281 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
+    <title>Marco Jean Pagotaisidro - Web Developer Portfolio</title>
     <link rel="icon" type="image/png" href="assets/images/icon.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/all.css">
-    <link rel="stylesheet" href="assets/css/home.css">
-    <link rel="stylesheet" href="assets/css/about_me.css">
-    <link rel="stylesheet" href="assets/css/projects.css">
-    <link rel="stylesheet" href="assets/css/skills.css">
-    <link rel="stylesheet" href="assets/css/animations.css">
-    <link rel="stylesheet" href="assets/css/premium-effects.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/redesign.css">
 </head>
 <body>
-    <!-- header -->
-    <div class="col-md-12 col-12 align-items-center justify-content-center pt-3 mb-5 header d-flex" id="home-header">
-        <div class="col-md-10 col-11 p-3 d-flex align-items-center justiify-content-center header-color rounded border">
-            <div class="col-md-4 col-5 d-flex align-items-center justify-content-center">
-                <strong class="fs-4" style="letter-spacing: -0.5px;"><span style="color: #FF5D5D;">Jean</span><span style="color: #FFFFFF;">Portfolio</span></strong>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <span class="logo-highlight">Jean</span><span class="logo-text">Dev</span>
             </div>
-            
-            <div class="col-md-8 col-7 d-flex justify-content-end">
-                <div class="col-md-1 burger" id="display-media-nav" style="display: none;">
-                    <i class="fa-solid fa-x text-white fs-5 cursor-pointer" style="display: none;" id="x-display"></i>
-                    <i class="fa-solid fa-bars text-white fs-5 cursor-pointer" id="burger-display"></i>
-                </div>
-                <ul class="rounded shadow flex-column justify-content-center align-items-center col-md-12 col-5 border m-0 p-0 font-15 py-2 bg-content" id="display-flex-media" style="display: none;">
-                    <li class="py-1"><a class="nav-media fw-bold w-100 text-center active-nav" id="display-home-media" href="#">Home</a></li>
-                    <li class="py-1"><a class="nav-media fw-bold w-100 text-center" id="display-about_me-media"  href="#About_me">About Me</a></li>
-                    <li class="py-1"><a class="nav-media fw-bold w-100 text-center"  id="display-projects-media" href="#projects">Project</a></li>
-                    <li class="py-1"><a class="nav-media fw-bold w-100 text-center" id="display-skills-media" href="#skills">Skills</a></li>
-                    <li class="py-1"><a class="nav-media fw-bold w-100 text-center"  id="display-contact-media" href="#contact">Contact</a></li>
-                </ul>
-                <ul class="d-flex display-none-media justify-content-center align-items-center gap-5 col-md-12 col-12 m-0 p-0 font-15 px-3">
-                    <li><a class="nav fw-bold active-nav" id="display-home" href="#" style="
-                        color: rgb(255, 93, 93);
-                        border-bottom: solid 2px rgb(255, 93, 93);"
-                        >Home</a>
-                    </li>
-                    <li><a class="nav fw-bold" id="display-about_me" href="#About_me">About Me</a></li>
-                    <li><a class="nav fw-bold" id="display-projects" href="#projects">Project</a></li>
-                    <li><a class="nav fw-bold" id="display-skills" href="#skills">Skills</a></li>
-                    <li><a class="nav fw-bold" id="display-contact" href="#contact">Contact</a></li>
-                </ul>
+            <div class="burger-menu" id="burgerMenu">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
         </div>
-    </div>
+    </nav>
 
-    <!-- Contents -->
-    <div class="contents d-flex flex-column col-md-12 col-12">
-        <!-- HOME -->
-        <div id="home" class="col-md-12 col-12 d-flex align-items-start justify-content-center ">
-            <div class="col-md-11 d-flex col-11 flex-wrap-me">
-                <div class="col-md-8 col-12 d-flex flex-column home-title-group">
-                    <div class="col-md-12">
-                        <strong class="fs-4 w-100" style="color: #FF5D5D; font-weight: 600;">Hello, I'm</strong>
+    <!-- Hero Section with Parallax -->
+    <section id="home" class="hero">
+        <div class="parallax-bg" style="background-image: url('assets/images/hero-bg.jpg')"></div>
+        <div class="parallax-layer" style="background-image: url('assets/images/parallax-layer.jpg')"></div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="word">Marco</span>
+                    <span class="word">Jean</span>
+                    <span class="word">Pagotaisidro</span>
+                </h1>
+                <p class="hero-subtitle">Full Stack Web Developer & Digital Craftsman</p>
+                <p class="hero-description">Building exceptional digital experiences with modern technologies and creative problem-solving</p>
+                <a href="#projects" class="cta-button">
+                    Explore My Work
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-card">
+                    <div class="card-content">
+                        <i class="fas fa-code"></i>
+                        <p>Clean Code</p>
                     </div>
-                    <div class="col-md-12">
-                        <strong class="font-5 media-font-5 fw-bolder" style="color: #FFFFFF;">Marco Jean</strong>
+                </div>
+                <div class="floating-card delay-1">
+                    <div class="card-content">
+                        <i class="fas fa-palette"></i>
+                        <p>Design Focus</p>
                     </div>
-                    <div class="col-md-12">
-                        <strong class="font-5 media-font-5 fw-bolder" style="color: #FFFFFF;">Pagotaisidro</strong>
+                </div>
+                <div class="floating-card delay-2">
+                    <div class="card-content">
+                        <i class="fas fa-rocket"></i>
+                        <p>Performance</p>
                     </div>
-                    <div class="col-md-12">
-                        <strong class="media-font-3 font-3" style="color: #FFFFFF;">Web Developer</strong>
-                    </div>
-                    <div class="col-md-12 home-subtitle">
-                        <strong class="text-light">Passionate about continuous learning and contributing to <br>
-                            open-source projects that support the developer community and beyond.</strong>
-                    </div>
-                    <div class="col-md-12 mt-4 home-cta-button">
-                        <a href="#projects" id="display-projects-button" class="btn btn-danger round shadow border" style="background-color: #FF5D5D; border-color: #FF5D5D; font-weight: 600; padding: 12px 28px; transition: all 0.3s ease;">View my works<i class="ms-1 fa-solid fa-arrow-right"></i></a>
-                    </div>
-                    <div class="col-md-12 mt-4 d-flex gap-2">
-                        <a href="https://github.com/JeanBackEndOnly" class="a-link cursor-pointer d-flex align-items-center text-white fs-6">
-                            <i class="fa-brands fa-github me-1"></i>
-                            Github
-                        </a>
-                        <a href="https://www.instagram.com/jean21650?igsh=OGlkMzZqYnp1c2xs" class="a-link cursor-pointer d-flex align-items-center text-white fs-6">
-                            <i class="fa-brands fa-instagram me-1"></i>
-                            Instagram
-                        </a>
-                        <a href="https://www.facebook.com/share/18FWCB57HG/" class="a-link cursor-pointer d-flex align-items-center text-white fs-6">
-                            <i class="fa-brands fa-facebook me-1"></i>
-                            Facebook
-                        </a>
-                        <a href="https://www.tiktok.com/@jean213423?_r=1&_t=ZS-94X4KlXrF57" class="a-link cursor-pointer d-flex align-items-center text-white fs-6">
-                            <i class="fa-brands fa-tiktok me-1"></i>
-                            Tiktok
-                        </a>
-                    </div>
-                </div> 
+                </div>
+            </div>
+        </div>
 
-                <div class="col-md-4 col-12 d-flex align-items-center justify-content-center">
-                    <strong>
-                        <i class="fa-brands fa-php mb-5 media-fa-code text-light font-50"></i>
-                    </strong>
-                </div> 
-            </div>
-        </div> 
-        <!-- ABOUT ME -->
-        <div class="col-md-12 col-12 d-flex align-items-start justify-content-center about-me-media-margin mt-5" id="About_me">
-            <div class="col-md-11 col-11 d-flex flex-column align-items-start justify-content-center">
-                <div class="col-md-12 margin-top" id="display-margin" style="display:none;"></div>
-                <strong class="w-100 text-center fs-3 margin-top-media"><span style="color: #C9D1D9;">ABOUT</span> <span style="color: #FF5D5D;">ME</span></strong>
-                <div class="col-md-12 col-12 border rounded bg-content d-flex mt-3 flex-wrap-me shadow">
-                    <div class="col-md-4 col-12 d-flex align-items-start justify-content-center pt-5">
-                        <img src="assets/images/dp.jpg" class="image-about-me border">
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <div class="mouse"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-lg-6 about-text">
+                    <h2>About Me</h2>
+                    <p>I'm a passionate Full Stack Web Developer from Zamboanga City, currently pursuing a BS in Information Technology. With a strong foundation in web technologies, I specialize in creating beautiful, functional, and user-centered digital solutions.</p>
+                    
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h4>Education</h4>
+                            <p>BS InfoTech, 4th Year</p>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h4>Location</h4>
+                            <p>Zamboanga City, PH</p>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-briefcase"></i>
+                            <h4>Freelance</h4>
+                            <p>Web Development</p>
+                        </div>
                     </div>
-                    <div class="col-md-8 col-12 py-5 d-flex flex-column px-2">
-                        <strong class="w-100 text-start" style="color: #C9D1D9;"><i class="fa-regular fa-user me-2" style="color: #FF5D5D;"></i><span class="fs-5">Personal Information</span></strong>
-                        <strong class="fs-2" style="color: #FF5D5D;">Marco Jean F. Pagotaisidro</strong>
-                        <strong class="fs-4" style="color: #FFFFFF;">IT Student & Aspiring Programmer</strong>
-                        <p class="text-light">I'm an IT student who loves building for the web and learning by doing. <br>
-                            I enjoy tackling real-world challenges and continuously improving my skills <br>
-                            through practical experience.
-                        </p>
-                        <div class="col-md-12 d-flex">
-                            <div class="col-md-3 col-4">
-                                <strong class="w-100" style="color: #FFFFFF;">
-                                    <i class="fa-solid fa-phone me-2" style="color: #FF5D5D;"></i>Phone:
-                                </strong>
-                            </div>
-                            <div class="col-md-9 col-7">
-                                <strong class="w-100" style="color: #FFFFFF;">09357745262</strong>
-                            </div>
+                </div>
+
+                <div class="col-lg-6 about-image">
+                    <div class="image-wrapper">
+                        <img src="assets/images/featured-work.jpg" alt="About">
+                        <div class="image-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Project -->
+    <section class="featured-project">
+        <div class="container-fluid">
+            <h2 class="section-title">Featured Project</h2>
+            <div class="featured-card">
+                <div class="featured-image">
+                    <img src="assets/images/featured-work.jpg" alt="HRIS">
+                </div>
+                <div class="featured-content">
+                    <h3>Human Resource Information System</h3>
+                    <p>A comprehensive system built for Zamboanga Puericulture Center featuring admin, HR, and employee dashboards with real-time data management and reporting capabilities.</p>
+                    <div class="tech-stack">
+                        <span class="tech-badge">HTML</span>
+                        <span class="tech-badge">CSS</span>
+                        <span class="tech-badge">JavaScript</span>
+                        <span class="tech-badge">PHP</span>
+                        <span class="tech-badge">MySQL</span>
+                    </div>
+                    <a href="#projects" class="view-project">View All Projects →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section id="projects" class="projects">
+        <div class="container-fluid">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/images/featured-work.jpg" alt="HRIS">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link">View Project</a>
                         </div>
-                        <div class="col-md-12 d-flex">
-                            <div class="col-md-3 col-4">
-                                <strong class="w-100" style="color: #FFFFFF;">
-                                    <i class="fa-solid fa-graduation-cap me-2" style="color: #FF5D5D;"></i>Education:
-                                </strong>
-                            </div>
-                            <div class="col-md-9 col-7">
-                                <strong class="w-100" style="color: #FFFFFF;">BS InfoTech, 4th Year</strong>
-                            </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Human Resource Information System</h3>
+                        <p>System for Zamboanga Puericulture Center focusing on HR management with role-based access control.</p>
+                        <div class="project-tags">
+                            <span>Web App</span>
+                            <span>System Design</span>
                         </div>
-                        <div class="col-md-12 d-flex">
-                            <div class="col-md-3 col-4">
-                                <strong class="w-100" style="color: #FFFFFF;">
-                                    <i class="fa-solid fa-location-dot me-2" style="color: #FF5D5D;"></i>Location:
-                                </strong>
-                            </div>
-                            <div class="col-md-9 col-7">
-                                <strong class="w-100" style="color: #FFFFFF;">Purok 2B, Malagutay Zamboanga City</strong>
-                            </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/images/featured-work.jpg" alt="ZPSU">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link">View Project</a>
                         </div>
-                        <div class="col-md-12 d-flex">
-                            <div class="col-md-3 col-4">
-                                <strong class="w-100" style="color: #FFFFFF;">
-                                    <i class="fa-solid fa-envelope me-2" style="color: #FF5D5D;"></i>Email:
-                                </strong>
-                            </div>
-                            <div class="col-md-9 col-8">
-                                <strong class="w-100 text-break" style="color: #FFFFFF;">pagotaisidromarcojean@gmail.com</strong>
-                            </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Evaluation Management System</h3>
+                        <p>Faculty evaluation system for Zamboanga Polytechnic State University with multi-role functionality.</p>
+                        <div class="project-tags">
+                            <span>Web App</span>
+                            <span>Education</span>
                         </div>
-                        <div class="col-md-12 d-flex">
-                            <div class="col-md-3 col-4">
-                                <strong class="w-100" style="color: #FFFFFF;">
-                                    <i class="fa-solid fa-briefcase me-2" style="color: #FF5D5D;"></i>Freelance:
-                                </strong>
-                            </div>
-                            <div class="col-md-9 col-7">
-                                <strong class="w-100" style="color: #FFFFFF;">Web Development</strong>
-                            </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/images/featured-work.jpg" alt="Gym">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link">View Project</a>
                         </div>
-                        <div class="col-md-12 mt-3 mb-3">
-                            <button class="btn btn-outline-danger py-3 px-4" id="display-no-cv-yet">
-                                <i class="fa-solid fa-download me-2"></i>DOWNLOAD CV
-                            </button>
-                        </div>
-                        <div class="display-no-cv border p-4 py-2 bg-content rounded position-absolute"  style="display: none;" id="display-no-cv">
-                            <label class="form-label fw-bold text-white m-0">NO CV YET</label>
-                            <i class="fa-solid fa-x text-white font-11 cursor-pointer" id="x-display-cv"></i>
-                        </div>
-                        <div class="col-md-12 col-12 d-flex">
-                            <div class="col-md-2">
-                                <strong class="text-light fs-5">
-                                    Interests:
-                                </strong>
-                            </div>
-                            <div class="border-interest col-md-10"></div>
-                        </div>
-                        <div class="col-md-12 col-12 d-flex gap-2 mt-2 flex-wrap-me">
-                            <strong class="btn btn-dark rounded">
-                                <span class="text-danger"><i class="fa-solid fa-headphones me-2"></i></span>Music
-                            </strong>
-                            <strong class="btn btn-dark rounded">
-                                <span class="text-danger"><i class="fa-solid fa-film me-2"></i></span>Movie
-                            </strong>
-                            <strong class="btn btn-dark rounded">
-                                <span class="text-danger"><i class="fa-solid fa-gamepad me-2"></i></span>gaming
-                            </strong>
-                            <strong class="btn btn-dark rounded">
-                                <span class="text-danger"><i class="fa-solid fa-code me-2"></i></span>Coding
-                            </strong>
-                            <strong class="btn btn-dark rounded">
-                                <span class="text-danger"><i class="fa-solid fa-person-running me-2"></i></span>Sports
-                            </strong>
-                            <strong class="btn btn-dark rounded">
-                                <span class="text-danger"><i class="fa-solid fa-dumbbell me-2"></i></span>workouts
-                            </strong>
+                    </div>
+                    <div class="project-info">
+                        <h3>Gym Management System</h3>
+                        <p>My first system - Contract and membership management for KF Fitness Gym.</p>
+                        <div class="project-tags">
+                            <span>Web App</span>
+                            <span>First Project</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- PROJECTS -->
-        <div class="col-md-12 col-12 d-flex align-items-start justify-content-center projects-height mt-5" id="projects">
-            <div class="col-md-11 col-12 d-flex flex-column align-items-center justify-content-center">
-                <div class="col-md-12 display-margin-projects" id="display-margin-projects" style="display:none;"></div>
-                <strong class="w-100 text-center fs-3 margin-top-media"><span style="color: #C9D1D9;">My</span> <span style="color: #FF5D5D;">Projects</span></strong>
-                <div class="row col-md-12 col-11 d-flex align-items-start justify-content-start mt-5">
-                    <!-- Pueri Culture -->
-                    <div class="col-md-4 col-12 mb-3">
-                        <div class="hover-project d-flex p-3 flex-column align-items-center justify-content-start bg-content min-project-height flex-column border shadow rounded">
-                            <div class="col-md-11 col-11 position-relative">
-                                <a style="display: none;" href="https://github.com/JeanBackEndOnly/HRZCPuerieOrg" class="rounded shadow border-light col-md-12 col-12 align-items-center h-100 justify-content-center hover-link">
-                                    <strong class="btn btn-info rounded fw-bold px-4">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></strong>
-                                </a>
-                                <img src="assets/images/pueri.png" class="w-100 max-height-img rounded shadow border-light" alt="HR dashaboard">
-                            </div>
-                            <div class="col-md-11 col-11 mt-2">
-                                <strong class="w-100 fs-4 text-start" style="color: #FF5D5D;">Human Resource Information System</strong>
-                            </div>
-                            <div class="col-md-11 col-11 mt-1 mb-3">
-                                <p style="color: #C9D1D9;">A system for Zamboanga Puericulture Center that <br> 
-                                    focuses on Human Resource. Actors of admin, Hr and employees.</p>
-                            </div>
-                            <div class="col-md-11 col-11 d-flex flex-wrap-me gap-2">
-                                <strong class="w-100 text-start text-light">Tech Stack Used:</strong>
-                                <strong class="circle-tech d-flex align-items-center justify-content-center"><i class="fs-3 fa-brands fa-html5"></i></strong>
-                                <strong class="circle-tech d-flex align-items-center justify-content-center"><i class="fs-3 fa-brands fa-css3-alt"></i></strong>
-                                <strong class="circle-tech d-flex align-items-center justify-content-center"><i class="fs-3 fa-brands fa-php"></i></strong>
-                                <strong class="circle-tech d-flex align-items-center justify-content-center"><i class="fs-3 fa-brands fa-js"></i></strong>
-                            </div>
-                        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container-fluid">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h4>Frontend</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Bootstrap</span>
                     </div>
-                    <!-- ZPPSU Evaluation -->
-                    <div class="col-md-4 col-12 mb-3">
-                        <div class="hover-project d-flex p-3 flex-column align-items-center justify-content-start bg-content min-project-height flex-column border shadow rounded">
-                            <div class="col-md-11 col-11 position-relative">
-                                <a style="display: none;" href="https://github.com/JeanBackEndOnly/Zppsu-Evaluation-System" class="rounded shadow border-light col-md-12 col-12 align-items-center h-100 justify-content-center hover-link">
-                                    <strong class="btn btn-info rounded fw-bold px-4">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></strong>
-                                </a>
-                                <img src="assets/images/eval.png" class="w-100 max-height-img rounded shadow border-light" alt="HR dashaboard">
-                            </div>
-                            <div class="col-md-11 col-11 mt-2">
-                                <strong class="w-100 fs-4 text-start" style="color: #FF5D5D;">Evaluation Management System</strong>
-                            </div>
-                            <div class="col-md-11 col-11 mt-1 mb-3">
-                                <p style="color: #C9D1D9;">A system for Zamboanga Polytechnic <br>  State University 
-                                    focuses on faculties evaluation.<br> Actors of  Admin, Faculty, Student, and department head</p>
-                            </div>
-                            <div class="col-md-11 col-11 d-flex flex-wrap-me gap-2">
-                                <strong class="w-100 text-start text-light">Tech Stack Used:</strong>
-                                <strong class="circle-tech d-flex align-items-center justify-content-center"><i class="fs-3 fa-brands fa-html5"></i></strong>
-                                <strong class="circle-tech d-flex align-items-center justify-content-center"><i class="fs-3 fa-brands fa-css3-alt"></i></strong>
-                                <strong class="circle-tech d-flex align-items-center justify-content-center"><i class="fs-3 fa-brands fa-php"></i></strong>
-                                <strong class="circle-tech d-flex align-items-center justify-content-center"><i class="fs-3 fa-brands fa-js"></i></strong>
-                            </div>
-                        </div>
+                </div>
+
+                <div class="skill-category">
+                    <h4>Backend</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PHP</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">Database Design</span>
                     </div>
-                    <!-- OAMS -->
-                    <!-- <div class="col-md-4 col-12 mb-3">
-                        <div class="hover-project d-flex p-3 flex-column align-items-center justify-content-start bg-content min-project-height flex-column border shadow rounded">
-                            <div class="col-md-11 col-11 position-relative">
-                                <a style="display: none;" href="https://github.com/JeanBackEndOnly/OAMS-ZPPSU" class="rounded shadow border-light col-md-12 col-12 align-items-center h-100 justify-content-center hover-link">
-                                    <strong class="btn btn-info rounded fw-bold px-4">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></strong>
-                                </a>
-                                <img src="assets/images/oams.png" class="w-100 max-height-img rounded shadow border-light" alt="HR dashaboard">
-                            </div>
-                            <div class="col-md-11 col-11 mt-2">
-                                <strong class="w-100 fs-4 text-start text-danger">Online Accreditation Management System</strong>
-                            </div>
-                            <div class="col-md-11 col-11 mt-1 mb-3">
-                                <p class="text-light">A system for Zamboanga Polytechnic <br>  State University 
-                                    focuses on Department Accreditation. Actors of admin, department head, program head and faculty.</p>
-                            </div>
-                            <div class="col-md-11 col-11 d-flex flex-wrap-me gap-2">
-                                <strong class="w-100 text-start text-light">Tech Stack Used:</strong>
-                                <strong class="circle-tech d-flex align-items-center justify-content-center"><i class="fs-3 fa-brands fa-html5"></i></strong>
-                                <strong class="circle-tech d-flex align-items-center justify-content-center"><i class="fs-3 fa-brands fa-css3-alt"></i></strong>
-                                <strong class="circle-tech d-flex align-items-center justify-content-center"><i class="fs-3 fa-brands fa-php"></i></strong>
-                                <strong class="circle-tech d-flex align-items-center justify-content-center"><i class="fs-3 fa-brands fa-js"></i></strong>
-                            </div>
-                        </div>
-                    </div> -->
-                    <!-- KF Fitness Gym -->
-                    <div class="col-md-4 col-12">
-                        <div class="hover-project d-flex p-3 flex-column align-items-center justify-content-start bg-content min-project-height flex-column border shadow rounded">
-                            <div class="col-md-11 col-11 position-relative">
-                                <a style="display: none;" href="https://github.com/JeanBackEndOnly/kf_fittrack" class="rounded shadow border-light col-md-12 col-12 align-items-center h-100 justify-content-center hover-link">
-                                    <strong class="btn btn-info rounded fw-bold px-4">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></strong>
-                                </a>
-                                <img src="assets/images/gym.png" class="w-100 max-height-img rounded shadow border-light" alt="HR dashaboard">
-                            </div>
-                            <div class="col-md-11 col-11 mt-2">
-                                <strong class="w-100 fs-4 text-start" style="color: #FF5D5D;">Gym Management System</strong>
-                            </div>
-                            <div class="col-md-11 col-11 mt-1 mb-3">
-                                <p style="color: #C9D1D9;">A system for KF Fitness Gym <br> 
-                                    focuses on Contract and membership. the very <br> first system of mine.</p>
-                            </div>
-                            <div class="col-md-11 col-11 d-flex flex-wrap-me gap-2">
-                                <strong class="w-100 text-start text-light">Tech Stack Used:</strong>
-                                <strong class="circle-tech d-flex align-items-center justify-content-center"><i class="fs-3 fa-brands fa-html5"></i></strong>
-                                <strong class="circle-tech d-flex align-items-center justify-content-center"><i class="fs-3 fa-brands fa-css3-alt"></i></strong>
-                                <strong class="circle-tech d-flex align-items-center justify-content-center"><i class="fs-3 fa-brands fa-php"></i></strong>
-                                <strong class="circle-tech d-flex align-items-center justify-content-center"><i class="fs-3 fa-brands fa-js"></i></strong>
-                            </div>
-                        </div>
+                </div>
+
+                <div class="skill-category">
+                    <h4>Tools & Platforms</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">Responsive Design</span>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- SKILLS -->
-        <div class="col-md-12 col-12 d-flex align-items-start justify-content-center projects-height mt-5"      id="skills">
-            <div class="col-md-11 col-11 d-flex flex-column align-items-center justify-content-center">
-                <div class="col-md-12 display-margin-projects" id="display-margin-skills" style="display:none;"></div>
-                <strong class="w-100 text-center fs-3 margin-top-media"><span style="color: #C9D1D9;">Technical</span> <span style="color: #FF5D5D;"> Skills</span></strong>
-                <div class="col-md-8 d-flex justify-content-between align-items-center mt-5 flex-wrap-me">
-                    <button class="btn mb-2 px-3 border-light btn-color active" id="fontend">
-                        <strong class="text-white"><i class="fa-solid fa-code me-1"></i>Frontend</strong>
-                    </button>
-                    <button class="btn mb-2 px-3 border-light btn-color" id="backend">
-                        <strong class="text-white"><i class="fa-solid fa-code me-1"></i>Backend</strong>
-                    </button>
-                    <button class="btn mb-2 px-3 border-light btn-color" id="database">
-                        <strong class="text-white"><i class="fa-solid fa-database me-1"></i>Databases</strong>
-                    </button>
-                    <button class="btn mb-2 px-3 border-light btn-color" id="devTools">
-                        <strong class="text-white"><i class="fa-solid fa-gear me-1"></i>Development Tools</strong>
-                    </button>
-                    <button class="btn mb-2 px-3 border-light btn-color" id="host">
-                        <strong class="text-white"><i class="fa-solid fa-server me-1"></i>Hosting and Development</strong>
-                    </button>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container-fluid">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-text">
+                    <h3>Ready to work together?</h3>
+                    <p>I&apos;m always interested in hearing about new projects and opportunities.</p>
                 </div>
-                <div class="col-md-12 row justify-content-center" id="display-front-end">
-                    <div class="col-md-2 col-12">
-                        <div class="py-2 col-md-12 rounded d-flex flex-column mt-4 text-light border bg-content">
-                            <strong class="mb-2 d-flex flex-column w-100 text-center font-6"><i class="fa-brands fa-html5"></i>
-                                <span class="fs-5 w-100">HTML</span>
-                            </strong>
-                            <strong class="w-100 text-center pb-3">COMFORTABLE</strong>
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-12">
-                        <div class="py-2 col-md-12 rounded d-flex flex-column mt-4 text-light border bg-content">
-                            <strong class="mb-2 w-100 d-flex flex-column text-center font-6"><i class="fa-brands fa-css3"></i>
-                                <span class="fs-5 w-100">CSS</span>
-                            </strong>
-                            <strong class="w-100 text-center pb-3">COMFORTABLE</strong>
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-12">
-                        <div class="py-2 col-md-12 rounded d-flex flex-column mt-4 text-light border bg-content">
-                            <strong class="mb-2 w-100 d-flex flex-column text-center font-6"><i class="fa-brands fa-js"></i>
-                                <span class="fs-5 w-100">JAVASCRIPT</span>
-                            </strong>
-                            <strong class="w-100 text-center pb-3">BASICS JS</strong>
-                        </div>
-                    </div>
+
+                <div class="contact-info">
+                    <a href="mailto:pagotaisidromarcojean@gmail.com" class="contact-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>pagotaisidromarcojean@gmail.com</span>
+                    </a>
+                    <a href="tel:09357745262" class="contact-link">
+                        <i class="fas fa-phone"></i>
+                        <span>09357745262</span>
+                    </a>
                 </div>
-                <div class="col-md-12 row justify-content-center" style="display: none;" id="display-back-end">
-                    <div class="col-md-2 col-12">
-                        <div class="py-2 col-md-12 rounded d-flex flex-column mt-4 text-light border bg-content">
-                            <strong class="mb-2 w-100 d-flex flex-column text-center font-6"><i class="fa-brands fa-php"></i>
-                                <span class="fs-5 w-100">PHP</span>
-                            </strong>
-                            <strong class="w-100 text-center pb-3">COMFORTABLE</strong>
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-12">
-                        <div class="py-2 col-md-12 rounded d-flex flex-column mt-4 text-light border bg-content">
-                            <strong class="mb-2 w-100 d-flex flex-column text-center font-6"><i class="fa-brands fa-laravel"></i>
-                                <span class="fs-5 w-100">LARAVEL</span>
-                            </strong>
-                            <strong class="w-100 text-center pb-3">COMFORTABLE</strong>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-12 row justify-content-center" style="display: none;" id="display-Database">
-                    <div class="col-md-2 col-12">
-                        <div class="py-2 col-md-12 col-12 rounded d-flex flex-column mt-4 text-light border bg-content">
-                            <strong class="mb-2 px-5 w-100 d-flex flex-column text-center justify-content-center align-items-center font-6">
-                                <img src="assets/images/mysql.png" alt="MYSQL" class="mysql-img">
-                                <span class="fs-5 w-100">MYSQL</span>
-                            </strong>
-                            <strong class="w-100 text-center pb-3">COMFORTABLE</strong>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-12 row justify-content-center" style="display: none;" id="display-devTools">
-                    <div class="col-md-2 col-12">
-                        <div class="py-2 col-md-12 col-12 rounded d-flex flex-column mt-4 text-light border bg-content">
-                            <strong class="mb-2 px-5 w-100 d-flex flex-column text-center justify-content-center align-items-center font-6">
-                                <img src="assets/images/vscode-icon-29.png" alt="VSCODE" class="mysql-img">
-                                <span class="fs-5 w-100">VSCODE</span>
-                            </strong>
-                            <strong class="w-100 text-center pb-3">COMFORTABLE</strong>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-12 row justify-content-center" style="display: none;" id="display-HostDev">
-                    <div class="col-md-2 col-12">
-                        <div class="py-2 col-md-12 col-12 rounded d-flex flex-column mt-4 text-light border bg-content">
-                            <strong class="mb-2 px-5 w-100 d-flex flex-column text-center justify-content-center align-items-center font-6">
-                                <img src="assets/images/211432.png" alt="VSCODE" class="mysql-img">
-                                <span class="fs-5 w-100">XAMPP</span>
-                            </strong>
-                            <strong class="w-100 text-center pb-3">COMFORTABLE</strong>
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-12">
-                        <div class="py-2 col-md-12 col-12 rounded d-flex flex-column mt-4 text-light border bg-content">
-                            <strong class="mb-2 px-5 w-100 d-flex flex-column text-center justify-content-center align-items-center font-6">
-                                <img src="assets/images/9032137.png" alt="VSCODE" class="mysql-img">
-                                <span class="fs-5 w-100">INFINITY FREE</span>
-                            </strong>
-                            <strong class="w-100 text-center pb-3">COMFORTABLE</strong>
-                        </div>
-                    </div>
+
+                <div class="social-links">
+                    <a href="#" class="social-link" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="social-link" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="social-link" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
                 </div>
             </div>
         </div>
-        <!-- CONTACT -->
-        <div class="col-md-12 col-12 d-flex align-items-center justify-content-center projects-height mt-5 mb-5" id="contact">
-            <div class="col-md-11 col-12 d-flex flex-column align-items-center justify-content-center">
-                <div class="col-md-12 display-margin-projects" id="display-margin-contact" style="display:none;"></div>
-                <strong class="mb-5 w-100 text-center fs-3 margin-top-media"><span style="color: #C9D1D9;">My</span> <span style="color: #FF5D5D;"> Contact</span></strong>
-                <div class="px-3 d-flex flex-column justify-content-center align-items-center rounded py-4 col-md-8 col-11 border bg-content contact-card" style="border-color: var(--border-light) !important; position: relative; z-index: 1;">
-                    <label class="form-label text-center m-0" style="color: #C9D1D9; position: relative; z-index: 2;">Ready to work together?</label>
-                    <strong class="w-100 text-center fs-1" style="color: #FFFFFF; position: relative; z-index: 2;">Let's <span style="color: #FF5D5D;">Connect</span></strong>
-                    <label class="form-label text-center" style="color: #8B949E; position: relative; z-index: 2;">Let&apos;s build something amazing. Reach out and let&apos;s start a conversation</label>
-                    <div class="d-flex my-2 col-md-12 col-12 text-center justify-content-center align-items-center flex-wrap-me" style="position: relative; z-index: 2;">
-                        <div class="d-flex align-items-center justify-content-center col-md-3 col-12 scale-on-hover" style="transition: all 0.3s ease;"><i class="fa-regular fa-envelope me-2" style="color: #FF5D5D;"></i><p class="m-0" style="color: #C9D1D9;">pagotaisidromarcojean@gmail.com</p></div>
-                        <div class="d-flex align-items-center justify-content-center col-md-3 col-12 scale-on-hover" style="transition: all 0.3s ease;"><i class="fa-solid fa-mobile-screen-button me-2" style="color: #FF5D5D;"></i><p class="m-0" style="color: #C9D1D9;">09357745262</p></div>
-                    </div>
-                    <span class="w-100 text-center" style="color: #C9D1D9; position: relative; z-index: 2;"><i class="fa-solid fa-location-dot me-2" style="color: #FF5D5D;"></i>
-                    Purok 2B, Malagutay Zamboanga City</span>
-                </div>
-            </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container-fluid">
+            <p>&copy; 2024 Marco Jean Pagotaisidro. All rights reserved.</p>
         </div>
-    </div>
-    <!-- JavaScripts -->
-    <script src="assets/js/index.js" defer></script>
-    <script src="assets/js/skills.js" defer></script>
-    <script src="assets/js/media-nav.js" defer></script>
+    </footer>
+
+    <script src="assets/js/redesign.js"></script>
 </body>
 </html>
