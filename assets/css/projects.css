@@ -1,0 +1,32 @@
+.display-margin-projects{
+    margin-top: 6rem !important;
+}
+.max-height-img{
+    max-height: 20vh;
+}
+.hover-link{
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(1px);
+    transition: 0.5s ease;
+}
+.hover-project{
+    transition: 0.5s ease;
+}
+.hover-project:hover .hover-link{
+    display: flex !important;
+    border: solid 1px red !important;
+}
+.hover-project:hover{
+    border: solid 1px red !important;
+}
+.min-project-height{
+    max-height: 70vh !important;
+    min-height: 60vh !important;
+}
+.circle-tech{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: aliceblue;
+}

@@ -1,0 +1,14 @@
+.btn-color{
+    transition: 0.3s;
+    position: relative;
+}
+.btn-color:hover{
+    background-color: rgb(200, 0,0);
+}
+.active{
+    background-color: rgb(200, 0,0);
+}
+.mysql-img{
+    width: 100px;
+    height: 100px;
+}

@@ -1,0 +1,141 @@
+html{
+    background-color: #161618 !important;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    height: 100vh;
+    margin: 0;
+    overflow-y: auto;
+    overflow-x: hidden !important;
+}
+body{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    width: 100%;
+    margin: 0;
+    background: transparent;
+    flex-wrap: wrap;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+/* Public usage */
+.font-50{
+    font-size: 20rem;
+}
+.font-11{
+    font-size: 11px;
+}
+.font-12{
+    font-size: 12px;
+}
+.font-13{
+    font-size: 13px;
+}
+.font-14{
+    font-size: 14px;
+}
+.font-15{
+    font-size: 15px;
+}
+.font-3{
+    font-size: 3rem;
+}
+.font-4{
+    font-size: 4rem;
+}
+.font-5{
+    font-size: 5rem;
+}
+.font-6{
+    font-size: 6rem;
+}
+.cursor-pointer{
+    cursor: pointer !important;
+}
+#projects, #home, #About_me, #skills, #certifications, #contact{
+    height: 100% !important;
+}
+#home-header{
+    z-index: 999;
+}
+.display-flex{
+    display: flex;
+}
+.header{
+    position: sticky;
+    top: 0;
+}
+.header-color{
+    background-color: #3A3A3B;
+}
+.header{
+    background-color: transparent;   
+}
+.nav{
+    border-bottom: solid 1px transparent;
+    color: #fff;
+}
+.nav:hover{
+    color: rgb(255, 93, 93) !important;
+    border-bottom: solid 2px rgb(255, 93, 93) !important;
+}
+.nav-media{
+    color: #fff;
+}
+.nav-media:hover{
+    color: rgb(255, 93, 93) !important;
+}
+.a-link:hover{
+    color: rgb(255, 93, 93) !important;
+}
+#About_me{
+    position: relative;
+}
+.display-no-cv{
+    transition: 0.5s ease;
+    animation-name: fade_animation;
+    animation-duration: 1s;
+}
+#x-display-cv{
+    transform: translate(0.7rem, 0.4rem);
+}
+@keyframes fade_animation {
+    from{
+        opacity: 0;
+    }   
+    to{
+        opacity: 1;
+    }
+}
+.display-no-cv{
+    top: 50%;
+    left: 1rem;
+}
+@media(max-width: 780px){
+    .burger{
+        display: flex !important;
+    }
+    .display-none-media{
+        display: none !important;
+    }
+    .media-font-5{
+        font-size: 3rem;
+    }
+    .media-font-3{
+        font-size: 2rem;
+    }
+    #display-flex-media{
+        position: absolute;
+        top: 0;
+        right: 1rem;
+        transform: translateY(4.5rem);
+    }
+    #burger-display, #x-display{
+        transition: 1s ease-in-out;
+    }
+}

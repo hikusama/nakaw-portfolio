@@ -1,0 +1,34 @@
+.bg-content{
+    background-color: #181A20;
+}
+.margin-top{
+    margin-top: 6rem !important;
+}
+.image-about-me{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.border-interest{
+    border-bottom: solid 1px #fff;    
+    position: relative;
+    transform: translateY(-.7rem);
+}
+.flex-wrap-me{
+    flex-wrap: wrap;
+}
+@media (max-width: 780px){
+    .media-fa-code{
+        font-size: 10rem !important;
+        border: solid 1px #fff;
+        padding: 20px;
+        margin-top: 10px;
+        border-radius: 10px;
+    }
+    .about-me-media-margin{
+        margin-top: 5rem !important;
+    }
+    .margin-top-media{
+        margin-top: 20px;
+    }
+}
