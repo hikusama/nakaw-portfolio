@@ -1,14 +1,36 @@
-.btn-color{
-    transition: 0.3s;
+.btn-color {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
+    background-color: var(--bg-tertiary) !important;
+    border: 1px solid var(--border-light) !important;
+    color: var(--text-primary) !important;
+    font-weight: 500;
+    border-radius: 8px;
 }
-.btn-color:hover{
-    background-color: rgb(200, 0,0);
+
+.btn-color:hover {
+    background-color: var(--accent-red) !important;
+    border-color: var(--accent-red) !important;
+    color: white !important;
+    box-shadow: 0 8px 16px rgba(255, 93, 93, 0.3);
+    transform: translateY(-4px);
 }
-.active{
-    background-color: rgb(200, 0,0);
+
+.btn-color.active {
+    background-color: var(--accent-red) !important;
+    border-color: var(--accent-red) !important;
+    color: white !important;
+    box-shadow: 0 8px 16px rgba(255, 93, 93, 0.3);
 }
-.mysql-img{
+
+.mysql-img {
     width: 100px;
     height: 100px;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.mysql-img:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 8px 16px rgba(255, 93, 93, 0.3));
 }
