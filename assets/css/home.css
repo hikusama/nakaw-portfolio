@@ -1,0 +1,125 @@
+/* Premium Home Section Styling */
+
+#home {
+    background: linear-gradient(135deg, #0F1117 0%, #161B22 50%, #0F1117 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+#home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(255, 93, 93, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(255, 93, 93, 0.06) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.home-title-group {
+    animation: fadeInUp 1s ease-out;
+}
+
+.home-title-group strong:first-child {
+    display: inline-block;
+    animation: fadeInDown 0.8s ease-out 0.1s backwards;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.home-title-group strong:nth-child(2) {
+    display: inline-block;
+    animation: fadeInUp 0.8s ease-out 0.3s backwards;
+    font-weight: 800;
+    text-shadow: 0 4px 20px rgba(255, 93, 93, 0.3);
+}
+
+.home-title-group strong:nth-child(3) {
+    display: inline-block;
+    animation: fadeInUp 0.8s ease-out 0.5s backwards;
+    font-weight: 800;
+}
+
+.home-subtitle {
+    animation: fadeInUp 0.8s ease-out 0.7s backwards;
+    position: relative;
+}
+
+.home-cta-button {
+    animation: slideInRight 0.8s ease-out 1s backwards;
+}
+
+.home-cta-button a {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.home-cta-button a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.home-cta-button a:hover::before {
+    left: 100%;
+}
+
+.home-cta-button a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 40px rgba(255, 93, 93, 0.4);
+}
+
+.home-cta-button a i {
+    animation: floatUp 2s ease-in-out infinite;
+    display: inline-block;
+}
+
+/* Premium scroll indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    animation: fadeInUp 1s ease-out 1.5s forwards;
+}
+
+.scroll-indicator span {
+    display: block;
+    width: 24px;
+    height: 40px;
+    border: 2px solid var(--accent-red);
+    border-radius: 12px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.scroll-indicator span::after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 8px;
+    background: var(--accent-red);
+    border-radius: 1px;
+    animation: floatUp 1.5s ease-in-out infinite;
+}
+
+@media(max-width: 780px) {
+    .home-title-group strong:nth-child(2),
+    .home-title-group strong:nth-child(3) {
+        display: block;
+    }
+}

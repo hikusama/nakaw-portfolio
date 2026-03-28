@@ -17,26 +17,49 @@
 }
 
 .hover-project{
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     background-color: var(--bg-secondary);
     border: 1px solid var(--border-color) !important;
-    border-radius: 12px;
+    border-radius: 16px;
     overflow: hidden;
+    position: relative;
+    animation: fadeInUp 0.8s ease-out backwards;
+}
+
+.hover-project::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 93, 93, 0.1) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    border-radius: 16px;
+}
+
+.hover-project:hover::before {
+    opacity: 1;
 }
 
 .hover-project:hover .hover-link{
     display: flex !important;
     border: 1px solid var(--accent-red) !important;
+    animation: fadeInUp 0.3s ease-out;
 }
 
 .hover-project:hover{
-    border: 1px solid var(--accent-red) !important;
-    box-shadow: 0 20px 40px rgba(255, 93, 93, 0.15);
-    transform: translateY(-8px);
+    border: 2px solid var(--accent-red) !important;
+    box-shadow: 
+        0 20px 60px rgba(255, 93, 93, 0.25),
+        inset 0 1px 0 rgba(255, 93, 93, 0.1);
+    transform: translateY(-12px);
 }
 
 .hover-project:hover .max-height-img {
-    transform: scale(1.05);
+    transform: scale(1.08);
 }
 
 .min-project-height{
@@ -51,14 +74,32 @@
     background: linear-gradient(135deg, rgba(255, 93, 93, 0.15), rgba(255, 93, 93, 0.05));
     border: 1px solid var(--accent-red);
     color: var(--accent-red);
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
+    position: relative;
+    overflow: hidden;
+    animation: scaleIn 0.6s ease-out backwards;
+}
+
+.circle-tech::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, rgba(255, 93, 93, 0.3) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.circle-tech:hover::before {
+    opacity: 1;
+    animation: glowPulse 1.5s ease-in-out infinite;
 }
 
 .circle-tech:hover {
     background: linear-gradient(135deg, var(--accent-red), var(--accent-red-dark));
     color: white;
-    transform: scale(1.1);
+    transform: scale(1.15) rotate(5deg);
+    box-shadow: 0 8px 20px rgba(255, 93, 93, 0.4);
 }
