@@ -1,36 +1,56 @@
 .btn-color {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     background-color: var(--bg-tertiary) !important;
     border: 1px solid var(--border-light) !important;
     color: var(--text-primary) !important;
-    font-weight: 500;
-    border-radius: 8px;
+    font-weight: 600;
+    border-radius: 10px;
+    overflow: hidden;
+    animation: fadeInUp 0.6s ease-out backwards;
+}
+
+.btn-color::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 93, 93, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn-color:hover::before {
+    left: 100%;
 }
 
 .btn-color:hover {
     background-color: var(--accent-red) !important;
     border-color: var(--accent-red) !important;
     color: white !important;
-    box-shadow: 0 8px 16px rgba(255, 93, 93, 0.3);
-    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(255, 93, 93, 0.4);
+    transform: translateY(-6px);
 }
 
 .btn-color.active {
-    background-color: var(--accent-red) !important;
+    background: linear-gradient(135deg, var(--accent-red), var(--accent-red-dark)) !important;
     border-color: var(--accent-red) !important;
     color: white !important;
-    box-shadow: 0 8px 16px rgba(255, 93, 93, 0.3);
+    box-shadow: 0 12px 32px rgba(255, 93, 93, 0.5);
+    animation: glowPulse 2s ease-in-out infinite;
 }
 
 .mysql-img {
     width: 100px;
     height: 100px;
-    transition: all 0.3s ease;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+    animation: rotateIn 0.8s ease-out backwards;
+    position: relative;
 }
 
 .mysql-img:hover {
-    transform: scale(1.1);
-    filter: drop-shadow(0 8px 16px rgba(255, 93, 93, 0.3));
+    transform: scale(1.15) rotate(-5deg);
+    filter: drop-shadow(0 12px 24px rgba(255, 93, 93, 0.4));
 }
