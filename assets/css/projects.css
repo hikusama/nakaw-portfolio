@@ -1,32 +1,64 @@
 .display-margin-projects{
     margin-top: 6rem !important;
 }
+
 .max-height-img{
     max-height: 20vh;
+    object-fit: cover;
+    transition: all 0.3s ease;
 }
+
 .hover-link{
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(1px);
-    transition: 0.5s ease;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(6px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 8px;
 }
+
 .hover-project{
-    transition: 0.5s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color) !important;
+    border-radius: 12px;
+    overflow: hidden;
 }
+
 .hover-project:hover .hover-link{
     display: flex !important;
-    border: solid 1px red !important;
+    border: 1px solid var(--accent-red) !important;
 }
+
 .hover-project:hover{
-    border: solid 1px red !important;
+    border: 1px solid var(--accent-red) !important;
+    box-shadow: 0 20px 40px rgba(255, 93, 93, 0.15);
+    transform: translateY(-8px);
 }
+
+.hover-project:hover .max-height-img {
+    transform: scale(1.05);
+}
+
 .min-project-height{
     max-height: 70vh !important;
     min-height: 60vh !important;
 }
+
 .circle-tech{
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: aliceblue;
+    background: linear-gradient(135deg, rgba(255, 93, 93, 0.15), rgba(255, 93, 93, 0.05));
+    border: 1px solid var(--accent-red);
+    color: var(--accent-red);
+    transition: all 0.3s ease;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.circle-tech:hover {
+    background: linear-gradient(135deg, var(--accent-red), var(--accent-red-dark));
+    color: white;
+    transform: scale(1.1);
 }

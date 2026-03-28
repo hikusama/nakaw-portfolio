@@ -1,5 +1,19 @@
+:root {
+    --accent-red: #FF5D5D;
+    --accent-red-dark: #E84D4D;
+    --accent-red-light: #FF7070;
+    --bg-primary: #0F1117;
+    --bg-secondary: #161B22;
+    --bg-tertiary: #21262D;
+    --text-primary: #FFFFFF;
+    --text-secondary: #C9D1D9;
+    --text-tertiary: #8B949E;
+    --border-color: #30363D;
+    --border-light: #444C56;
+}
+
 html{
-    background-color: #161618 !important;
+    background-color: var(--bg-primary) !important;
     display: flex;
     align-items: start;
     justify-content: start;
@@ -7,7 +21,9 @@ html{
     margin: 0;
     overflow-y: auto;
     overflow-x: hidden !important;
+    scroll-behavior: smooth;
 }
+
 body{
     display: flex;
     align-items: start;
@@ -16,13 +32,19 @@ body{
     margin: 0;
     background: transparent;
     flex-wrap: wrap;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    letter-spacing: 0.32px;
 }
+
 li{
     list-style-type: none;
 }
+
 a{
     text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 /* Public usage */
 .font-50{
     font-size: 20rem;
@@ -44,78 +66,141 @@ a{
 }
 .font-3{
     font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: -1px;
 }
 .font-4{
     font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: -1.5px;
 }
 .font-5{
     font-size: 5rem;
+    font-weight: 700;
+    letter-spacing: -2px;
 }
 .font-6{
     font-size: 6rem;
+    font-weight: 700;
+    letter-spacing: -2.5px;
 }
+
 .cursor-pointer{
     cursor: pointer !important;
 }
+
 #projects, #home, #About_me, #skills, #certifications, #contact{
     height: 100% !important;
 }
+
 #home-header{
     z-index: 999;
 }
+
 .display-flex{
     display: flex;
 }
+
 .header{
     position: sticky;
     top: 0;
+    transition: all 0.3s ease;
 }
+
 .header-color{
-    background-color: #3A3A3B;
+    background-color: rgba(22, 27, 34, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
 }
+
 .header{
     background-color: transparent;   
 }
+
 .nav{
-    border-bottom: solid 1px transparent;
-    color: #fff;
+    border-bottom: solid 2px transparent;
+    color: var(--text-primary);
+    font-weight: 500;
+    padding-bottom: 4px;
+    position: relative;
+    transition: all 0.2s ease;
 }
+
 .nav:hover{
-    color: rgb(255, 93, 93) !important;
-    border-bottom: solid 2px rgb(255, 93, 93) !important;
+    color: var(--accent-red) !important;
+    border-bottom: solid 2px var(--accent-red) !important;
 }
+
+.nav.active-nav {
+    color: var(--accent-red) !important;
+    border-bottom: solid 2px var(--accent-red) !important;
+}
+
 .nav-media{
-    color: #fff;
+    color: var(--text-primary);
+    font-weight: 500;
+    transition: all 0.2s ease;
 }
+
 .nav-media:hover{
-    color: rgb(255, 93, 93) !important;
+    color: var(--accent-red) !important;
+    background-color: rgba(255, 93, 93, 0.1);
 }
+
+.nav-media.active-nav {
+    color: var(--accent-red) !important;
+    background-color: rgba(255, 93, 93, 0.1);
+}
+
+.a-link {
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
 .a-link:hover{
-    color: rgb(255, 93, 93) !important;
+    color: var(--accent-red) !important;
+    transform: translateX(4px);
 }
+
 #About_me{
     position: relative;
 }
+
 .display-no-cv{
-    transition: 0.5s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     animation-name: fade_animation;
-    animation-duration: 1s;
+    animation-duration: 0.4s;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-light) !important;
 }
+
 #x-display-cv{
     transform: translate(0.7rem, 0.4rem);
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
+
+#x-display-cv:hover {
+    transform: translate(0.7rem, 0.4rem) scale(1.2);
+    color: var(--accent-red) !important;
+}
+
 @keyframes fade_animation {
     from{
         opacity: 0;
+        transform: translateY(-10px);
     }   
     to{
         opacity: 1;
+        transform: translateY(0);
     }
 }
+
 .display-no-cv{
     top: 50%;
     left: 1rem;
 }
+
 @media(max-width: 780px){
     .burger{
         display: flex !important;
@@ -134,8 +219,10 @@ a{
         top: 0;
         right: 1rem;
         transform: translateY(4.5rem);
+        background-color: var(--bg-secondary);
+        border: 1px solid var(--border-light) !important;
     }
     #burger-display, #x-display{
-        transition: 1s ease-in-out;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 }
